@@ -49,6 +49,8 @@ public class NaverClient {
         var httpEntity = new HttpEntity<>(headers);
         // response Type 준비
         var responseType = new ParameterizedTypeReference<SearchLocalRes>(){};
+//        var responseType = new ParameterizedTypeReference<String>(){};
+
 
         // RestTemplate 통해서 결과(uri/header/ request/response) 얻어옴
         var responseEntity = new RestTemplate().exchange(
@@ -60,6 +62,7 @@ public class NaverClient {
 
         // getBody 통해 결과 return
         return responseEntity.getBody();
+//        return null;
 
     }
 
