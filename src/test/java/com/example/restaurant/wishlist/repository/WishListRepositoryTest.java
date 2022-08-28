@@ -33,7 +33,7 @@ public class WishListRepositoryTest {
         var wishListEntity = create();
         var expected = wishListRepository.save(wishListEntity);
 
-        Assertions.assertNotNull(expected);
+        Assertions.assertNotNull(expected); // null이면 안됨
         Assertions.assertEquals(1, expected.getIndex());
     }
 

@@ -12,7 +12,7 @@ abstract public class MemoryDbRepositoryAbstract<T extends MemoryDbEntity> imple
     @Override
     public Optional<T> findById(int index) {
         return db.stream().filter(it -> it.getIndex() == index).findFirst();
-        // db stream()에 들어있는 List<T> db 타입에 대한부분
+        // filter: db stream()에 들어있는 List<T> db 타입에 대한부분
         // it.getIndex() : MemoryDbEntity에 정의된 index를 의미
     }
 
