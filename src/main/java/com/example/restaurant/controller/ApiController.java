@@ -11,7 +11,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/restaurant")
+@RequestMapping("/api/food")
 @RequiredArgsConstructor
 public class ApiController {
 
@@ -33,7 +33,7 @@ public class ApiController {
     }
 
     // WishList에 추가된 데이터 보이기
-    @GetMapping("/all")
+    @GetMapping("/wish-list")
     public List<WishListDto> findAll(){
         return wishListService.findAll();
     }
